@@ -7,5 +7,6 @@ urlpatterns = [
     path('menu/',views.menu),
     path('nosotros/',views.nosotros),
     path('locales/',views.locales),
-    path('soporte/',views.soporte)
+    path('soporte/',views.soporte),
+    path('stobger/', views.stobger),
 ]

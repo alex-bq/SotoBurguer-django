@@ -1,9 +1,8 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  {% load static %}
-
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,7 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'styles/estilo.css' %}">
 
-  <link rel="icon" type="image/x-icon" href="{% static 'imagenes/burger.png' %}"/>
+  <link rel="icon" type="image/x-icon" href="{% static 'imagenes/burger.png' %}" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -38,25 +37,25 @@
 
           <li class="nav-item">
 
-            <a class="nav-link active text-white" href="menu.html"><i class="fa-solid fa-list"></i> Menú</a>
+            <a class="nav-link active text-white" href="/menu"><i class="fa-solid fa-list"></i> Menú</a>
           </li>
           <li class="nav-item">
 
-            <a class="nav-link active text-white" href="Locales.html"><i class="fa-solid fa-shop"></i> Locales</a>
+            <a class="nav-link active text-white" href="/locales"><i class="fa-solid fa-shop"></i> Locales</a>
           </li>
           <li class="nav-item">
-            <a class="navbar-brand" href="../index.html">
-              <img src="../Imagenes/burger.png" alt="logo" width="70" height="46">
+            <a class="navbar-brand" href="#">
+              <img src="{% static 'imagenes/burger.png' %}" alt="logo" width="70" height="46">
             </a>
           </li>
           <li class="nav-item">
 
-            <a class="nav-link active text-white" href="Nosotros.html"><i class="fa-solid fa-user-group"></i>
+            <a class="nav-link active text-white" href="/nosotros"><i class="fa-solid fa-user-group"></i>
               Nosotros</a>
           </li>
           <li class="nav-item">
 
-            <a class="nav-link active text-white" href="soporte.html"><i class="fa-solid fa-comments"></i>
+            <a class="nav-link active text-white" href="/soporte"><i class="fa-solid fa-comments"></i>
               Soporte</a>
           </li>
 
@@ -84,7 +83,7 @@
 
       <div class="col">
         <div class="card text-center">
-          <img src="../Imagenes/Local_abierto_1.jpg" class="card-img-top" alt="..." width="300" height="300">
+          <img src="{% static 'imagenes/Local_abierto_1.jpg' %}" class="card-img-top" alt="..." width="300" height="300">
           <div class="card-body">
             <h5 class="card-title">Puerto Montt-Los Notros</h5>
             <p class="card-text">Los esperamos aquí </p>
@@ -95,7 +94,7 @@
 
       <div class="col">
         <div class="card">
-          <img src="../Imagenes/Local_Soto_2png.png" class="card-img-top" alt="..." width="300" height="300">
+          <img src="{% static 'imagenes/Local_Soto_2png.png' %}" class="card-img-top" alt="..." width="300" height="300">
           <div class="card-body text-center">
             <h5 class="card-title">Puerto Montt-Bosquemar</h5>
             <p class="card-text">Los esperamos aquí </p>
@@ -106,7 +105,7 @@
 
       <div class="col">
         <div class="card">
-          <img src="../Imagenes/Local_proximamente.jpg" class="card-img-top" alt="..." width="300" height="300">
+          <img src="{% static 'imagenes/Local_proximamente.jpg' %}" class="card-img-top" alt="..." width="300" height="300">
           <div class="card-body text-center">
             <h5 class="card-title">Próximamente</h5>
             <p class="card-text">Mall nuevo costanera center</p>
@@ -203,7 +202,7 @@
 
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
       © 2023 Todos los derechos reservados:
-      <a class="text-reset fw-bold" href="index.html">www.SotoBurguers.com</a>
+      <a class="text-reset fw-bold" href="{% static '' %}">www.SotoBurguers.com</a>
     </div>
 
     <a class="ir-arriba" javascript:void(0) title="Volver arriba">

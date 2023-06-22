@@ -17,3 +17,7 @@ def locales(request):
 
 def soporte(request):
     return render(request, "soporte.html")
+
+def stobger(request):
+    return render(request, "stobger.html")
+    
