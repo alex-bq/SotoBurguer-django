@@ -1,0 +1,428 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Don Luis Olavarría, Don Soto, Don Alex Barrientos">
+  <title>Soto Burguers </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'styles/estilo.css' %}">
+
+  <link rel="icon" type="image/x-icon" href="{% static 'imagenes/burger.png' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light text-light">
+    <div class="container-fluid ">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="nav justify-content-center">
+
+          <li class="nav-item">
+
+
+
+
+            <a class="nav-link active text-white" href="/menu"><i class="fa-solid fa-list"></i> Menú</a>
+          </li>
+          <li class="nav-item">
+
+            <a class="nav-link active text-white" href="/locales"><i class="fa-solid fa-shop"></i> Locales</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" href="#">
+              <img src="Imagenes/burger.png" id="amburgesa" alt="logo" width="70" height="46" onpo>
+            </a>
+          </li>
+          <li class="nav-item">
+
+            <a class="nav-link active text-white" href="/nosotros"><i class="fa-solid fa-user-group"></i>
+              Nosotros</a>
+          </li>
+          <li class="nav-item">
+
+            <a class="nav-link active text-white" href="html/soporte.html"><i class="fa-solid fa-comments"></i>
+              Soporte</a>
+          </li>
+
+      </div>
+    </div>
+  </nav><br><br><br>
+  <header>
+    <img id="brand" src="Imagenes/image.png" alt="brand sotoburguer">
+  </header>
+
+  <article class="container-sm">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Imagenes/wncomiendo.jpg" class="d-block w-100" alt="loco comiendo" width="" height="480px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Soto Burguers</h5>
+            <p>Que ganas de comer una rica hamburguesita</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="Imagenes/lokitasComiendo.jpg" class="d-block w-100" alt="..." width="" height="480px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Soto Burguers</h5>
+            <p>Que ganas de comer una rica hamburguesita</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="Imagenes/lokComiendo.jpg" class="d-block w-100" alt="chico_comiendo" width="" height="480px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Soto Burguers</h5>
+            <p>Que ganas de comer una rica hamburguesita</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </article>
+  <br>
+  <header class="titulo container d-flex justify-content-center">
+    <div class="row">
+      <div class="col">
+        <h1 class="display-3">Novedades</h1>
+      </div>
+    </div>
+    <br>
+  </header>
+
+
+  <main class="container-lg d-flex align-items-center justify-content-center">
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card text-center">
+          <img src="Imagenes/burguerWebito.jpg" class="card-img-top" alt="..." width="300" height="400">
+          <div class="card-body">
+            <h5 class="card-title">Nueva EggSoto Burguer</h5>
+            <p class="card-text">Prueba nuestra nueva EggSoto Burguer.</p>
+            <a class="btn btn-warning" href="html/stobgeregg.html" role="button">Ver mas...</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center">
+          <img src="Imagenes/3x1.png" class="card-img-top" alt="..." width="300" height="400">
+          <div class="card-body">
+            <h5 class="card-title">Promo tres Soto Burguers</h5>
+            <p class="card-text">Llévate tres Soto Burguers por el precio de una.</p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Ver mas...
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Promo Soto Burger</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Esta vez Don Soto se rajo con tres Soto Burguers por el mismo precio </p>
+                    <div class="card text-center">
+                      <img src="Imagenes/Soto_disfrutando.jpg" width="300" alt="">
+                    </div>
+                    <p>ALAVENLO</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Listo</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center">
+          <img src="Imagenes/hamburguesa.jpg" class="card-img-top" alt="..." width="300" height="400">
+          <div class="card-body">
+            <h5 class="card-title">Menú Junaeb</h5>
+            <p class="card-text">El menú junaeb ya llego a Soto Burguer, Prueba ya!!</p>
+
+
+
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Ver mas...
+            </button>
+
+
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Menú Junaeb</h5>
+
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="card text-center">
+                      <img src="../Imagenes/beterraga.jpg" class="card-img-top" alt="sotoburguer" height="300">
+                      <div class="card-body">
+                        <h1>Vegan Soto</h1>
+
+                      </div>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Información Nutricional</th>
+                            <th>Por Producto</th>
+                            <th>IDR %</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Calorías</td>
+                            <td>550 kcal</td>
+                            <td>28%</td>
+                          </tr>
+                          <tr>
+                            <td>Proteínas</td>
+                            <td>28 g</td>
+                            <td>56%</td>
+                          </tr>
+                          <tr>
+                            <td>Carbohidratos</td>
+                            <td>40 g</td>
+                            <td>13%</td>
+                          </tr>
+                          <tr>
+                            <td>Grasas</td>
+                            <td>30 g</td>
+                            <td>46%</td>
+                          </tr>
+                          <tr>
+                            <td>Sodio</td>
+                            <td>900 mg</td>
+                            <td>38%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="card text-center">
+                      <img src="../Imagenes/hamburguer.png" class="card-img-top" alt="sotoburguer" height="300">
+                      <div class="card-body">
+                        <h1>Soto Burger nerfeado</h1>
+                      </div>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Información Nutricional</th>
+                            <th>Por Producto</th>
+                            <th>IDR %</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Calorías</td>
+                            <td>550 kcal</td>
+                            <td>28%</td>
+                          </tr>
+                          <tr>
+                            <td>Proteínas</td>
+                            <td>28 g</td>
+                            <td>56%</td>
+                          </tr>
+                          <tr>
+                            <td>Carbohidratos</td>
+                            <td>40 g</td>
+                            <td>13%</td>
+                          </tr>
+                          <tr>
+                            <td>Grasas</td>
+                            <td>30 g</td>
+                            <td>46%</td>
+                          </tr>
+                          <tr>
+                            <td>Sodio</td>
+                            <td>900 mg</td>
+                            <td>38%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <p>Para poder disfrutar de estas maravillosas hamburguesas excluisvas de Soto Burger necesitaras
+                      la Beca Junaeb</p>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Listo</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center">
+          <img src="Imagenes/hamburguesaCnPapa.jpg" class="card-img-top" alt="..." width="300" height="400">
+          <div class="card-body">
+            <h5 class="card-title">Soto Burguer</h5>
+            <p class="card-text">Menús mas populares.</p>
+            <a class="btn btn-warning" href="html/menu.html" role="button">Ver mas...</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <br>
+
+  <footer>
+
+
+    <section class="container">
+      <br>
+      <div class="container text-center text-md-start">
+
+        <div class="row mt-3">
+
+
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+            <div id="alertRojo" class="alert alert-danger" role="alert">
+              El correo ingresesado es no es válido
+            </div>
+
+            <div id="alertVerde" class="alert alert-success" role="alert">
+              Correo ingresado correctamente
+            </div>
+
+            <h6 class="text-uppercase fw-bold mb-4">
+              ¿Quieres ser el primero en enterarte de nuestras nuevas hamburguesas y promos?
+            </h6>
+            <p>Suscríbete a nuestro Newsletter</p>
+
+            <form>
+              <div class="mb-3">
+                <label for="correo" class="form-label">Ingrese su correo: </label>
+                <input type="email" class="form-control" id="correo" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Nunca compartiremos tu correo</div>
+                <input type="button" class="btn btn-warning" value="Suscribirse"
+                  onclick="validarCorreo(document.getElementById('correo').value)">
+
+              </div>
+            </form>
+
+            <div id="ventanaModal" class="modal">
+              <div class="contenido-modal">
+                <span class="cerrar">&times;</span>
+                <h2 class="display-5">Soto Burguers</h2>
+                <p>se ha suscrito correctamente</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+            <h6 class="text-uppercase fw-bold mb-4">
+              Síguenos!
+            </h6>
+            <p>
+              <a href="https://www.instagram.com/soto__burguers/" target="_blank" class="text-reset">Instagram</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Facebook</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Twitter</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Tik Tok</a>
+            </p>
+          </div>
+
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+            <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+            <p>Al. del Libertador Bernardo O'Higgins 108, Santiago, Región Metropolitana </p>
+            <p>sotoburguers@gmail.com</p>
+            <p> +569 40155266</p>
+            <p> +569 26192736 </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+      © 2023 Todos los derechos reservados:
+      <a class="text-reset fw-bold" href="index.html">www.SotoBurguers.com</a>
+    </div>
+
+    <a class="ir-arriba" javascript:void(0) title="Volver arriba">
+      <span class="fa-stack">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+
+  </footer>
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <script src="javascript/funciones.js"></script>
+</body>
+
+
+
+</html>
