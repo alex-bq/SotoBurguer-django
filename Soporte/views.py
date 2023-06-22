@@ -14,3 +14,6 @@ def nosotros(request):
 
 def locales(request):
     return render(request,"Locales.html")
+
+def soporte(request):
+    return render(request, "soporte.html")
