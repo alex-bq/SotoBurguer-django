@@ -237,6 +237,15 @@ body.showLoginForm .popup{
     
 }
 
+@media screen and (max-width:1200px){
+    .team{
+        width: 90%;
+    }
+    
+}
+
+
+
 
 
 
