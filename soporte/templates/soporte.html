@@ -73,45 +73,42 @@
     <section>
       <div class="form-group">
         <h1 class="titulo_soporte"> Soporte</h1>
-        <form action="" id="formulario_contacto">
+        <form action="/registrarSoporte/" method="post" id="formulario_contacto">{% csrf_token %}
 
           <label for="nombre">Nombre</label>
           <br>
-          <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Machuca">
-
-
+          <input type="text" id="txtNombre" name="txtNombre" class="form-control" placeholder="Machuca">
           <br>
           <label for="email">Correo Electronico</label>
           <br>
-          <input type="email" name="email" id="email" class="form-control" placeholder="luchito@mail.com">
+          <input type="text" id="txtCorreo" name="txtCorreo" class="form-control" placeholder="luchito@mail.com">
           <br>
 
           <label for="tipo_mensaje">Tipo de Mensaje</label> <br>
-          <select name="tipo_mensaje" id="tipo_mensaje" class="form-control">
-            <option value="">Seleccionar</option>
-            <option value="reclamo">Reclamo</option>
-            <option value="sugerencia">Sugerencia</option>
-            <option value="felicitacion">Felicitacion</option>
+          <select type="text" id="txtTipo" name="txtTipo">
+            <option value="">Seleccione</option>
+            {% for s in tipo %}
+              <option value="{{s.mensajeId}}">{{s.descripcion}}</option>
+            {% endfor%}
           </select>
           <br>
 
-          <label for="ciudad">Ciudad</label> <br>
-          <select name="ciudad" id="ciudad" class="form-control">
-            <option value="">Seleccionar</option>
-            <option value="puertoMontt">Puerto Montt</option>
-            <option value="osorno">Osorno</option>
-            <option value="puertoVaras">Puerto Varas</option>
-            <option value="calbuco">Calbuco</option>
+          <label for="tipo_mensaje">Tipo de Mensaje</label> <br>
+          <select type="text" id="txtCiudad" name="txtCiudad">
+            <option value="">Seleccione</option>
+            {% for x in ciudad %}
+              <option value="{{x.ciudadId}}">{{x.descripcion}}</option>
+            {% endfor%}
           </select>
           <br>
 
           <label for="mensaje">Comentario</label>
           <br>
-          <textarea name="mensaje" id="mesaje" cols="30" rows="10" class="form-control"
+          <textarea type="text" id="txtMensaje" name="txtMensaje" cols="30" rows="10" class="form-control"
             placeholder="Aqui va el Mensaje..."></textarea>
           <br>
 
-          <button type="submit" id="guardar" class="btn btn-outline-success">Guardar</button>
+          <button type="submit" class="btn btn-outline-success">Guardar</button>
           <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
           <br>
         </form>
