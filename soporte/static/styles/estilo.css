@@ -1,0 +1,254 @@
+@font-face{
+    font-family: SotoBurgerNav;
+    src: url('../font/FjallaOne-Regular.ttf');
+}
+@font-face {
+    font-family: Sotoburger;
+    src: url('../font/PTSans-Regular.ttf');
+}
+
+.titulo_locales{
+    text-align: center;
+    font-size: 4em;
+
+}
+
+.titulo_soporte{
+    text-align: center;
+    font-size: 4em;
+}
+
+.formulario_a{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../Imagenes/fondo_formulario.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    gap: 60px;
+
+}
+
+
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    background-color: #FDFEFE;
+    max-width: 360px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2), 0 5px 5px 0 rgba(0,0,0,0.2);
+}
+
+.titulo{
+    font-weight: bold;   
+}
+.textoBarr{
+    font-size: large;
+    font-weight: bold; 
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.carousel-inner{
+ height: auto;
+ width: 100%;
+}
+
+.row{
+
+    padding: 10px;
+}
+
+.col-4{
+    margin: 100px;
+}
+
+.footer{
+    background-color: rgb 248, 249, 250;
+}
+
+#carouselExampleAutoplaying{
+    box-shadow: 5px 5px 15px gray;
+}
+
+.card-img-top{
+    box-shadow: 5px 5px 15px gray;
+}
+
+.sombra{
+    box-shadow: 5px 5px 15px gray;
+}
+img {
+    display: block;
+    margin: auto;
+
+}
+
+label.error{
+    color: red;
+}
+
+input.error   {
+    border: 1px solid red;
+}
+
+select.error   {
+    border: 1px solid red;
+}
+
+textarea.error   {
+    border: 1px solid red;
+}
+
+.div-img{
+    display: flex;
+    justify-content: center;
+}
+.contenedor {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.texto_encima{
+    position:absolute;
+    top: 100%;
+    right: 65%;
+    font-size:  70px;
+    color : white;
+
+}
+
+
+.ir-arriba{
+    display:none;
+    background-repeat:no-repeat;
+    font-size:20px;
+    color:black;
+    cursor:pointer;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    z-index:2;
+  }
+
+.color1 { color: #f1ecdf };
+.color2 { color:#d4c9ad };
+.color3 { color: #c7ba99 };
+.color4 { color: #000000 };
+.color5 { color: #e4844a };
+
+:root {
+    --bs-body-bg: #f1ecdf;
+    
+}
+
+
+
+nav{
+    
+    background-color: rgb(245, 172, 61);
+    font-family: SotoBurgerNav;
+    font-weight: bold;
+    font-size: large;  
+   
+}
+
+body{   
+    background-color: #f1ecdf;
+    font-family: SotoBurger;
+}
+
+footer{
+    Background-color:#d4c9ad;
+
+}
+
+
+body.showLoginForm .popup-overlay{
+    display: block;
+}
+body.showLoginForm .popup{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+
+#divmap{
+    height: 400px; 
+    width: 1180px;
+    margin: auto;
+    border-radius: 02%;
+    
+}
+
+
+
+  
+  /* Animación */
+  
+    
+  @keyframes animarsuperior {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* Botón cerrar */
+  .close {
+    color: black;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* mapita responsivo */
+
+@media screen and (max-width:1200px){
+    #divmap{
+        width: 80%;
+    }
+    
+}
+
+@media screen and (max-width:770px){
+    #divmap{
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width:1200px){
+    .team{
+        width: 90%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+  
