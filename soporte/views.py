@@ -25,8 +25,8 @@ def registrarSoporte(request):
     )
     return redirect('/')
 
-def crud (request):
+def crud(request):
     soporte = Soporte.objects.all()
     context = {'soporte': soporte}
-    return render(request, 'soporte/agregar.html', context)
+    return render(request, 'soporte/soporte.html', context)
 
