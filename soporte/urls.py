@@ -4,6 +4,8 @@ from . import views
 
 urlpatterns = [
     path('',views.soporte),
-    path('registrarSoporte', views.registrarSoporte)
+    path('gestion/',views.gestion),
+    path('registrarFeedback/',views.registrarFeedback),
+    path('eliminacionFeedback/<id>',views.eliminacionFeedback)
     
 ]
