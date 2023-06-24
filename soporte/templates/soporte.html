@@ -73,29 +73,31 @@
     <section>
       <div class="form-group">
         <h1 class="titulo_soporte"> Soporte</h1>
-        <label for="nombre">Nombre</label>
-        <br>
-        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Machuca">
+        <form action="" id="formulario_contacto">
+
+          <label for="nombre">Nombre</label>
+          <br>
+          <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Machuca">
 
 
-        <br>
-        <label for="email">Correo Electronico</label>
-        <br>
-        <input type="email" name="email" id="email" class="form-control" placeholder="luchito@mail.com">
-        <br>
+          <br>
+          <label for="email">Correo Electronico</label>
+          <br>
+          <input type="email" name="email" id="email" class="form-control" placeholder="luchito@mail.com">
+          <br>
 
 
-        <br>
 
-        <label for="mensaje">Comentario</label>
-        <br>
-        <textarea name="mensaje" id="mesaje" cols="30" rows="10" class="form-control"
-          placeholder="Aqui va el Mensaje..."></textarea>
-        <br>
+          <label for="mensaje">Comentario</label>
+          <br>
+          <textarea name="mensaje" id="mesaje" cols="30" rows="10" class="form-control"
+            placeholder="Aqui va el Mensaje..."></textarea>
+          <br>
 
-        <button type="submit" id="guardar" class="btn btn-outline-success">Guardar</button>
-        <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
-        <br>
+          <button type="submit" id="guardar" class="btn btn-outline-success">Guardar</button>
+          <br>
+        </form>
+        <a href="gestion/" class="btn btn-info">gestion</a>
       </div>
     </section>
   </main>
@@ -207,10 +209,9 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
-  <script src="../javascript/form_jquery.js"></script>
+  <script src="{% static 'javascript/form_jquery.js' %}"></script>
 
-  <script src="../javascript/funciones.js"></script>
-
+  <script src="{% static 'javascript/funciones.js' %}"></script>
 </body>
 
 </html>
