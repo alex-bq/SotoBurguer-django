@@ -7,48 +7,37 @@
 </head>
 <body>
     
-    <h1>Agregar datos soporte</h1><br>
-    <br>
+    <div style=" text-align: center;">
+        <h2>Formulario Crud para soporte </h2> <br>
+        <from action="soporte" method="POST" >
+            {% csrf_token %}
+            
+            <pre> Nombre : <input type="text" name="nombre" ></pre>
+            <pre> Correo : <input type="text" name="correo" ></pre>
 
-    <button type="button">
-        <a href="{% url 'Agregar' %}"> Agregar </a>
-    </button>
+            <pre> Tipo mensaje :  <select name="tipo mensaje" ></pre>
+                    {% for tipo_mensaje in tipomensaje %}
+                        <option value="{{tipo_mensaje.id_tipo_mensaje}}" >{{tipo_mensaje.tipo_mensaje}}</option>
+                    {% endfor %}
 
-    <div id="idMensajes">
-        {% if mensaje %}
+            <pre> Tipo mensaje :  <select name="tipo mensaje" ></pre>
+                    {% for tipo_mensaje in tipomensaje %}
+                        <option value="{{tipo_mensaje.id_tipo_mensaje}}" >{{tipo_mensaje.tipo_mensaje}}</option>
+                    {% endfor %}
+
+            <pre> Comentario : <input type="text" name="comentario" ></pre>
+
+            <input type="submit" name="opcion" value="Agregar">
+
+        </from> <br> <br>
+        <a href="{% url 'crud' %}"> Volver</a>
+        <br>
+        <div id="idMensajes">
+            {% if mensaje %}
             {{mensaje}}
-        {% endif %}
+            {% end %}          
+        </div>
     </div>
-
-    <table>
-        {% if soporte %}
-            <th> Nombre </th>
-            <th> Correo </th>
-            <th> Tipo mensaje</th>
-            <th> Tipo mensaje</th>
-            <th> Comentario</th>
-            <th> Eliminar </th>
-            <th> Modificar </th>
-            {% for x in soporte %}
-                <tr>
-                    <td> {{ x.Nombre }}
-                    <td> {{ x.Correo }}
-                    <td> {{ x.Tipo_mensaje}}
-                    <td> {{ x.Tipo_mensaje}}
-                    <td> <a href="{% url 'soporte_del' pk=x.nombre %}">Eliminar</a>
-                    <td> <a href="{% url 'soporte_findEdit' pk=x.nombre %}">Modificar</a>
-
-
-                </tr>
-            {% endfor %}
-        {% endif %}
-    </table>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#idMensajes").delay(2000).fadeOut("slow");
-        });
-    </script>
-        
+    
 </body>
 </html>

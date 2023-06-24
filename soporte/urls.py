@@ -6,6 +6,7 @@ urlpatterns = [
     path('soporte',views.soporte, name='soporte'),
     path('registrarSoporte', views.registrarSoporte),
     path('crud', views.crud, name='crud'),
+    path('Agregar', views.Agregar, name='Agregar'),
 
     
 ]
