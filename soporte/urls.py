@@ -6,6 +6,6 @@ urlpatterns = [
     path('',views.soporte),
     path('gestion/',views.gestion),
     path('registrarFeedback/',views.registrarFeedback),
-    path('eliminacionFeedback/<id>',views.eliminacionFeedback)
+    path('eliminarFeedback/<id>',views.eliminarFeedback)
     
 ]

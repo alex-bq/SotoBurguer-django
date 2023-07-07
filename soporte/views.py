@@ -20,10 +20,10 @@ def registrarFeedback(request):
         nombre=nombre, correo=correo, comentario=comentario)
     return redirect('/soporte/gestion/')
 
-def eliminacionFeedback(request,id):
+def eliminarFeedback(request,id):
     feedbacks = feedback.objects.get(id=id)
     feedbacks.delete()
-    return redirect('/')
+    return redirect('/soporte/gestion/')
     
 def soporte(request):
     return render(request, "soporte.html")

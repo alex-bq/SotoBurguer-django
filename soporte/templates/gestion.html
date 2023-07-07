@@ -55,8 +55,8 @@
                         <td>{{f.nombre}}</td>
                         <td>{{f.correo}}</td>
                         <td>{{f.comentario}}</td>
-                        <td><a href="edicionFeedback/{{f.id}}" class="btn btn-info">Editar</a></td>
-                        <td><a href="eliminacionFeedback/{{f.id}}" class="btn btn-danger">Eliminar</a></td>
+                        <td><a href="edicionFeedback/{{f.id}}/" class="btn btn-info">Editar</a></td>
+                        <td><a href="/soporte/eliminarFeedback/{{f.id}}" class="btn btn-danger">Eliminar</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>
