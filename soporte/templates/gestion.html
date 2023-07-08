@@ -3,67 +3,68 @@
 {% block content %}
 
 
+<div class="container py-4">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+            <h2> Gestion de Feedback</h2>
+            <div class="card">
+                <div class="card-body">
+                    <form action="/soporte/registrarFeedback/" method="POST" id="formulario_contacto">{% csrf_token %}
+                        <label for="nombre">Nombre</label>
+                        <br>
+                        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Machuca">
 
-<div class="row">
-    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
-        <h2> Gestion de Feedback</h2>
-        <div class="card">
-            <div class="card-body">
-                <form action="/soporte/registrarFeedback/" method="POST" id="formulario_contacto">{% csrf_token %}
-                    <label for="nombre">Nombre</label>
-                    <br>
-                    <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Machuca">
 
+                        <br>
+                        <label for="email">Correo Electronico</label>
+                        <br>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="luchito@mail.com">
+                        <br>
 
-                    <br>
-                    <label for="email">Correo Electronico</label>
-                    <br>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="luchito@mail.com">
-                    <br>
+                        <label for="mensaje">Comentario</label>
+                        <br>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="form-control"
+                            placeholder="Aqui va el Mensaje..."></textarea>
+                        <br>
 
-                    <label for="mensaje">Comentario</label>
-                    <br>
-                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="form-control"
-                        placeholder="Aqui va el Mensaje..."></textarea>
-                    <br>
+                        <button type="submit" id="guardar" class="btn btn-outline-success">Guardar</button>
+                        <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+                        <br>
+                    </form>
+                </div>
 
-                    <button type="submit" id="guardar" class="btn btn-outline-success">Guardar</button>
-                    <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
-                    <br>
-                </form>
             </div>
 
         </div>
+        <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+            <div class="table-responsive py-2">
+                <table class=" table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Comentario</th>
+                            <th colspan="2">Opciones </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for f in feedback %}
+                        <tr>
+                            <td>{{f.id}}</td>
+                            <td>{{f.nombre}}</td>
+                            <td>{{f.correo}}</td>
+                            <td>{{f.comentario}}</td>
+                            <td><a href="edicionFeedback/{{f.id}}/" class="btn btn-info">Editar</a></td>
+                            <td><a href="/soporte/eliminarFeedback/{{f.id}}" class="btn btn-danger">Eliminar</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
 
-    </div>
-    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
-        <div class="table-responsive py-2">
-            <table class=" table table-striped">
-                <thead>
-                    <tr>
-                        <th>Codigo</th>
-                        <th>Nombre</th>
-                        <th>Correo</th>
-                        <th>Comentario</th>
-                        <th colspan="2">Opciones </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for f in feedback %}
-                    <tr>
-                        <td>{{f.id}}</td>
-                        <td>{{f.nombre}}</td>
-                        <td>{{f.correo}}</td>
-                        <td>{{f.comentario}}</td>
-                        <td><a href="edicionFeedback/{{f.id}}/" class="btn btn-info">Editar</a></td>
-                        <td><a href="/soporte/eliminarFeedback/{{f.id}}" class="btn btn-danger">Eliminar</a></td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
+                </table>
+            </div>
 
-            </table>
         </div>
-
     </div>
 </div>
 

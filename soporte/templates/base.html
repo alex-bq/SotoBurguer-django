@@ -26,7 +26,6 @@
 
 <body>
 
-
     <nav class="navbar fixed-top navbar-expand-lg navbar-light text-light">
         <div class="container-fluid ">
 
@@ -46,6 +45,8 @@
                         <a class="nav-link active text-white" href="/locales"><i class="fa-solid fa-shop"></i>
                             Locales</a>
                     </li>
+
+
                     <li class="nav-item">
                         <a class="navbar-brand" href="#">
                             <img src="{% static 'imagenes/burger.png' %}" id="amburgesa" alt="logo" width="70"
@@ -63,13 +64,14 @@
                             Soporte</a>
                     </li>
 
+
             </div>
-            <div>
+            <div style="position: fixed; right: 40px;">
                 <!--pa mostrar el cerrar e iniciar sesión en el navbar-->
                 {% if user.is_authenticated %}
                 <!--para mostrar nombre de usuario-->
 
-                <a class="nav-link active text-black" href="#"><i class="fa-solid fa-user"></i> SotoBurguer Fan:
+                <a class="nav-link active text-white" href="#"><i class="fa-solid fa-user"></i>
                     {{user.username}}</a>
 
 
@@ -89,16 +91,16 @@
                 {% endif %}
             </div>
         </div>
-    </nav><br><br><br><br>
+    </nav><br><br><br>
 
 
-    <div class="container py-4">
-        {% block content%}
 
-        {% endblock %}
-    </div>
+    {% block content%}
 
-    <br>
+    {% endblock %}
+
+
+
 
     <footer>
 
