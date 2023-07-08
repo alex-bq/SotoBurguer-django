@@ -73,8 +73,7 @@
     <section>
       <div class="form-group">
         <h1 class="titulo_soporte"> Soporte</h1>
-        <form action="" id="formulario_contacto">
-
+        <form action="/soporte/registrarFeedback/" method="POST" id="formulario_contacto">{% csrf_token %}
           <label for="nombre">Nombre</label>
           <br>
           <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Machuca">
@@ -86,17 +85,16 @@
           <input type="email" name="email" id="email" class="form-control" placeholder="luchito@mail.com">
           <br>
 
-
-
           <label for="mensaje">Comentario</label>
           <br>
-          <textarea name="mensaje" id="mesaje" cols="30" rows="10" class="form-control"
-            placeholder="Aqui va el Mensaje..."></textarea>
+          <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="form-control"
+              placeholder="Aqui va el Mensaje..."></textarea>
           <br>
 
           <button type="submit" id="guardar" class="btn btn-outline-success">Guardar</button>
+          <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
           <br>
-        </form>
+      </form>
         {% if perms.app.change_feedback %}
         <a href="gestion/" class="btn btn-info">gestion</a>
         {% endif %}

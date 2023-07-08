@@ -21,6 +21,8 @@ class ciudad(models.Model):
         return str(
             self.descripcion
         )
+    
+
 class feedback(models.Model):
     nombre=models.CharField(max_length=50)
     correo=models.CharField(max_length=30)

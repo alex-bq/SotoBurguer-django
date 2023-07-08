@@ -18,7 +18,7 @@ def registrarFeedback(request):
 
     feedbacks = feedback.objects.create(
         nombre=nombre, correo=correo, comentario=comentario)
-    return redirect('/soporte/gestion/')
+    return redirect('/soporte')
 
 def eliminarFeedback(request,id):
     feedbacks = feedback.objects.get(id=id)
