@@ -25,7 +25,7 @@
 </head>
 
 <body>
-  
+
   <nav class="navbar fixed-top navbar-expand-lg navbar-light text-light">
     <div class="container-fluid ">
 
@@ -60,24 +60,30 @@
               Soporte</a>
           </li>
 
-          <!--pa mostrar el cerrar e iniciar sesión en el navbar-->
-          {% if user.is_authenticated %}
-          <!--para mostrar nombre de usuario-->
-          <li class="nav-item">
-          <a class="nav-link active text-black" href="#"><i class="fa-solid fa-user"></i> SotoBurguer Fan: {{user.username}}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-white" href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a>
-          </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="nav-link active text-white" href="{% url 'login' %}"><i class="fa-solid fa-user"></i> Iniciar sesión</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-white float-end" href="/registro"><i class="fa-solid fa-plus"></i> Registrate</a>
-          </li>
-          {% endif %}
 
+      </div>
+      <div>
+        <!--pa mostrar el cerrar e iniciar sesión en el navbar-->
+        {% if user.is_authenticated %}
+        <!--para mostrar nombre de usuario-->
+
+        <a class="nav-link active text-black" href="#"><i class="fa-solid fa-user"></i> SotoBurguer Fan:
+          {{user.username}}</a>
+
+
+        <a class="nav-link active text-white" href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket"></i>
+          Cerrar sesión</a>
+
+        {% else %}
+
+        <a class="nav-link active text-white" href="{% url 'login' %}"><i class="fa-solid fa-user"></i> Iniciar
+          sesión</a>
+
+
+        <a class="nav-link active text-white float-end" href="/registro"><i class="fa-solid fa-plus"></i>
+          Registrate</a>
+
+        {% endif %}
       </div>
     </div>
   </nav><br><br><br>
