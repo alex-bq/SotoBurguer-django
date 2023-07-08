@@ -97,7 +97,9 @@
           <button type="submit" id="guardar" class="btn btn-outline-success">Guardar</button>
           <br>
         </form>
+        {% if perms.app.change_feedback %}
         <a href="gestion/" class="btn btn-info">gestion</a>
+        {% endif %}
       </div>
     </section>
   </main>

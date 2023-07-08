@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
+
 # Create your views here.
  
 def index(request):
@@ -12,6 +13,7 @@ def nosotros(request):
 
 def locales(request):
     return render(request,"Locales.html")
+
 
 def registro(request):
     data = {
