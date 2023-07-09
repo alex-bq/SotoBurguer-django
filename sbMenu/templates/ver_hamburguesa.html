@@ -1,0 +1,101 @@
+{% extends "./layouts/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+<header class="container-lg d-flex align-items-center justify-content-left">
+    <div class="row row-cols-1 row-cols-md-2 g-2">
+        <div class="col">
+            <br>
+            <a class="btn btn-warning" href="/menu" role="button">Volver</a>
+        </div>
+    </div>
+</header>
+
+<main class="container-lg d-flex align-items-center justify-content-center">
+
+    <div class="row row-cols-1 row-cols-md-2 g-2">
+        <div class="col">
+            <div class="card text-center">
+                <img src="{{ MEDIA_URL }}{{ hamburguesa.foto }}" class="card-img-top" alt="sotoburguer" height="300">
+                <div class="card-body">
+                    <p>
+                        {{ hamburguesa.descripcion }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h1>{{ hamburguesa.nombre }}</h1>
+            <h5>{{ hamburguesa.calorias|floatformat:0 }} kcal</h5>
+            <div class="accordion" id="accordionExample">
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Historia
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            {{ hamburguesa.historia }}
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Información nutricional
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container">
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Información Nutricional</th>
+                                            <th>Por Producto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Calorías</td>
+                                            <td> {{ hamburguesa.calorias }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Proteínas</td>
+                                            <td>{{ hamburguesa.proteinas }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Carbohidratos</td>
+                                            <td>{{ hamburguesa.carbohidratos }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Grasas</td>
+                                            <td>{{ hamburguesa.grasas }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sodio</td>
+                                            <td>{{ hamburguesa.sodio }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}
