@@ -5,21 +5,24 @@
 {% block content %}
 
 
-<header class="container-lg d-flex align-items-center justify-content-left">
-    <div class="row row-cols-1 row-cols-md-2 g-2">
-        <div class="col">
-            <br>
-            <a class="btn btn-warning" href="/menu" role="button">Volver</a>
-        </div>
+<div class="row row-cols-1 row-cols-md-2 g-5">
+    <div class="col">
+        <br>
+        <a class="btn btn-warning" href="/menu">Volver</a>
     </div>
-</header>
+
+</div>
+
+
+
+
 
 <main class="container-lg d-flex align-items-center justify-content-center">
 
-    <div class="row row-cols-1 row-cols-md-2 g-2">
+    <div class="row row-cols-1 row-cols-md-2 g-5">
         <div class="col">
             <div class="card text-center">
-                <img src="{{ MEDIA_URL }}{{ hamburguesa.foto }}" class="card-img-top" alt="sotoburguer" height="300">
+                <img src="{{ hamburguesa.foto.url }}" class="card-img-top" alt="sotoburguer" height="300" width="300">
                 <div class="card-body">
                     <p>
                         {{ hamburguesa.descripcion }}

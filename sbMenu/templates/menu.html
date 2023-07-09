@@ -23,7 +23,8 @@
     {% for hamburguesa in hamburguesas %}
     <div class="col">
       <div class="card text-center">
-        <img src="{{ MEDIA_URL }}{{ hamburguesa.foto }}" class="card-img-top" alt="burguer" width="300" height="300">
+        <img src="{{ hamburguesa.foto.url }}" class="card-img-top" alt="{{ hamburguesa.nombre }}" width="300"
+          height="300">
         <div class="card-body">
           <h5 class="card-title">{{ hamburguesa.nombre }}</h5>
           <a href="hamburguesa/{{ hamburguesa.id }}" class="btn btn-warning">Ver más...</a>

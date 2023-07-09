@@ -11,7 +11,7 @@ class hamburguesa(models.Model):
     carbohidratos = models.DecimalField(max_digits=8, decimal_places=2)
     grasas = models.DecimalField(max_digits=8, decimal_places=2)
     sodio = models.DecimalField(max_digits=8, decimal_places=2)
-    foto = models.ImageField(upload_to='img-bgr/', blank=True, null=True)
+    foto = models.ImageField(upload_to='hamburguesas/', blank=True, null=True)
 
     def __str__(self):
         return self.nombre

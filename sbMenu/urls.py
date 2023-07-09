@@ -13,4 +13,4 @@ urlpatterns = [
     path('stobgerhilo/', views.stobgerhilo),
     path('hamburguesa/<int:id>/',  views.ver_hamburguesa, name='ver_hamburguesa'),
     
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
