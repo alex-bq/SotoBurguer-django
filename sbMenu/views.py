@@ -1,8 +1,13 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 def menu(request):
-    return render(request,"menu.html")
+    hamburguesas = hamburguesa.objects.all()
+    context = {
+        'hamburguesas': hamburguesas
+    }
+    return render(request, 'menu.html', context)
 
 def stobger(request):
     return render(request, "stobger.html")

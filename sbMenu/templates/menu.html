@@ -2,6 +2,7 @@
 
 {% load static %}
 
+
 {% block content %}
 
 <header class="titulo container d-flex justify-content-left">
@@ -19,75 +20,19 @@
 <main class="container d-flex align-items-center justify-content-center">
   <div class="row row-cols-1 row-cols-md-3 g-4">
 
+    {% for hamburguesa in hamburguesas %}
     <div class="col">
       <div class="card text-center">
-        <img src="{% static 'imagenes/hamburguer.png' %}" class="card-img-top" alt="..." width="300" height="300">
+        <img src="{{ hamburguesa.foto.url }}" class="card-img-top" alt="burguer" width="300" height="300">
         <div class="card-body">
-          <h5 class="card-title">Soto Burguer</h5>
-          <p class="card-text">Exquisita hamburguesa con queso, lechuga, cebolla y pan casero</p>
-          <a href="stobger/" class="btn btn-warning">Ver más...</a>
+          <h5 class="card-title">{{ hamburguesa.nombre }}</h5>
+          <a href="/stobger/{{ hamburguesa.id }}" class="btn btn-warning">Ver más...</a>
         </div>
       </div>
     </div>
+    {% endfor %}
 
-    <div class="col">
-      <div class="card">
-        <img src="{% static 'imagenes/burguerDoble.jpg' %}" class="card-img-top" alt="..." width="300" height="300">
-        <div class="card-body text-center">
-          <h5 class="card-title">Soto Burguer doble</h5>
-          <p class="card-text">Soto Burguer con bacon, pepinillos, salsa secreta y doble hamburguesa</p>
-          <a href="stobger2/" class="btn btn-warning">Ver más...</a>
-        </div>
-      </div>
-    </div>
 
-    <div class="col">
-      <div class="card">
-        <img src="{% static 'imagenes/burguerWebito.jpg' %}" class="card-img-top" alt="..." width="300" height="300">
-        <div class="card-body text-center">
-          <h5 class="card-title">EggSoto Burguer</h5>
-          <p class="card-text">Soto Burguer con quesito, webo, lechuga, bacon y tomate</p>
-          <a href="stobgeregg/" class="btn btn-warning">Ver más...</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card">
-        <img src="{% static 'imagenes/hamburguesaCnPapa.jpg' %}" class="card-img-top" alt="..." width="300"
-          height="300">
-        <div class="card-body text-center">
-          <h5 class="card-title">Soto Burguer con Soto Fries</h5>
-          <p class="card-text">Nuestra clásica Soto Burguer con las exquisitas Soto Fries</p>
-          <a href="stobgerfries/" class="btn btn-warning">Ver más...</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card">
-        <img src="{% static 'imagenes/hamburguesaTresQue.jpg' %}" class="card-img-top" alt="..." width="300"
-          height="300">
-        <div class="card-body text-center">
-          <h5 class="card-title">Soto tres quesos</h5>
-          <p class="card-text">Nuestra clásica Soto Burguer con las exquisitas Soto Fries</p>
-          <a href="stobger3qsos/" class="btn btn-warning">Ver más...</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card">
-        <img src="{% static 'imagenes/hamburguesaAlHilo.jpg' %}" class="card-img-top" alt="..." width="300"
-          height="300">
-        <div class="card-body text-center">
-          <h5 class="card-title">Soto Burguer al hilo</h5>
-          <p class="card-text">Soto burguer con extravagantes papas al hilo y salsa BBQ</p>
-          <a href="stobgerhilo/" class="btn btn-warning">Ver más...</a>
-        </div>
-      </div>
-    </div>
-  </div>
   </div>
 
 </main>
