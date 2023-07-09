@@ -66,6 +66,17 @@
 
 
             </div>
+            {% if perms.app.change_feedback %}
+            <div style="position: fixed; left: 10px;">
+                <div class="row row-cols-1 row-cols-md-2 g-5">
+                    <div class="col">
+
+                        <a class="btn btn-warning" href="/soporte/gestion">Administrar</a>
+                    </div>
+
+                </div>
+            </div>
+            {% endif %}
             <div style="position: fixed; right: 40px;">
                 <!--pa mostrar el cerrar e iniciar sesión en el navbar-->
                 {% if user.is_authenticated %}
