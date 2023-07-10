@@ -17,3 +17,17 @@ class hamburguesa(models.Model):
     def __str__(self):
         return self.nombre
     
+class carrito(models.Model):
+    hamburguesa = models.ForeignKey(hamburguesa, on_delete=models.CASCADE)
+    nombre = models.CharField(max_length=30)
+    precio = models.IntegerField()
+    cantidad = models.IntegerField(default=1)
+
+
+class Compra(models.Model):
+    fecha = models.DateTimeField(auto_now_add=True)
+    total = models.DecimalField(max_digits=8, decimal_places=2)
+    cantidad = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"Compra #{self.pk}"
