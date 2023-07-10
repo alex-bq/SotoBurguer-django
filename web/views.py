@@ -28,5 +28,6 @@ def registro(request):
             login(request, user)
             messages.success(request, "Registrado correctamente")
             return redirect(to="/")
+        
         data["form"] = formulario
     return render(request, 'registration/registro.html', data)
