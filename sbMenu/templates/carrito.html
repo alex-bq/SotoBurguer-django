@@ -41,6 +41,10 @@
                     {% endfor %}
                 </tbody>
             </table>
+            <form action="guardar_compra/" method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Comprar</button>
+            </form>
         </div>
     </div>
 </div>
@@ -49,7 +53,7 @@
 
 
 
-
+<br><br><br><br><br>
 
 
 {% endblock %}
