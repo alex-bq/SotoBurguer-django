@@ -47,9 +47,9 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('nombre_de_tu_vista')  # Redirige a la página deseada después del inicio de sesión exitoso
+            return redirect(to="/")  
         else:
-            error_message = 'Usuario o contraseña incorrectos'
-            return render(request, 'ruta_de_tu_template.html', {'error_message': error_message})
+            messages.error(request, "Datos incorrectos")
+            return render(request,'registration/login.html')
     else:
-        return render(request, 'ruta_de_tu_template.html')
+        return render(request, 'registration/login.html')
