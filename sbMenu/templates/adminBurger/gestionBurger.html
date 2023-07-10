@@ -18,6 +18,7 @@
                         <th>Nombre</th>
                         <th>Calorias</th>
                         <th>Foto</th>
+                        <th>Precio</th>
                         <th colspan="2">Opciones</th>
                     </tr>
                 </thead>
@@ -33,6 +34,7 @@
                                     <path
                                         d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z" />
                                 </svg></a></td>
+                        <td>${{h.precio}}</td>
                         <td><a href="/menu/eliminarBurguer/{{h.id}}" class="btn btn-danger">Eliminar</a></td>
                         <td>
                             <a href="/menu/editarBurguer/{{h.id}}" class="btn btn-success">Editar</a>
@@ -58,7 +60,8 @@
                 <img src="{{ h.foto.url }}" class="card-img-top" alt="{{ h.nombre }}" width="300" height="300">
                 <div class="card-body">
                     <h5 class="card-title">{{ h.nombre }}</h5>
-                    <a href="hamburguesa/{{ h.id }}" class="btn btn-warning">Ver más...</a>
+                    <p>${{h.precio}}</p>
+                    <a href="#" class="btn btn-warning">Ver más...</a>
                 </div>
             </div>
         </div>

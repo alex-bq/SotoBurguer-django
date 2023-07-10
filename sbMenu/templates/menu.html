@@ -36,6 +36,9 @@
 
           <a href="agregar_al_carrito/{{ hamburguesa.id }}/" class="btn btn-warning">Agregar al carro</a>
 
+          {% else %}
+          <a href="/cuenta/login/" class="btn btn-warning">Agregar al carro</a>
+
           {% endif %}
         </div>
       </div>

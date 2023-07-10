@@ -32,7 +32,7 @@ $(document).ready(function () {
             },
             mensaje: {
                 required: true,
-                minlength: 50
+                minlength: 15
             }
         },
         messages: {
@@ -53,7 +53,7 @@ $(document).ready(function () {
             },
             mensaje: {
                 required: "Por favor ingresa un comentario",
-                minlength: "El mensaje debe ser de al menos 50 caracteres"
+                minlength: "El mensaje debe ser de al menos 15 caracteres"
             }
         }
 
