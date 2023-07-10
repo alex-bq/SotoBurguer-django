@@ -1,12 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import *
 from .forms import *
-<<<<<<< HEAD
 from datetime import datetime
-=======
 from django.contrib import messages
 
->>>>>>> 35609c9f1bfe9af04bb72ed2a51f3320c2b24fc6
 
 def menu(request):
     hamburguesas = hamburguesa.objects.all()
@@ -30,7 +27,6 @@ def agregarHamburguesa(request):
     }
     return render(request,"adminBurger/agregarBurger.html",data)
 
-<<<<<<< HEAD
 def carrito(request):
     carrito_items = carritoItem.objects.all()
     total = sum(item.precio for item in carrito_items)
@@ -66,9 +62,15 @@ def guardar_compra(request):
     carrito_items.delete()
 
     return redirect('/menu/')
-=======
+
+def agregarHamburguesa(request):
+
+    data = {
+        'form' : hamburguesaForm()
+    }
+
     if request.method == 'POST':
-    
+
         formulario = hamburguesaForm(data=request.POST, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
@@ -110,4 +112,3 @@ def eliminarBurguer (request, id):
 
 
 
->>>>>>> 35609c9f1bfe9af04bb72ed2a51f3320c2b24fc6

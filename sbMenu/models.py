@@ -19,7 +19,6 @@ class hamburguesa(models.Model):
     def __str__(self):
         return self.nombre
     
-<<<<<<< HEAD
 class carritoItem(models.Model):
     hamburguesa = models.ForeignKey(hamburguesa, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=30)
@@ -34,5 +33,3 @@ class compra(models.Model):
 
     def __str__(self):
         return f"Compra {self.id}"
-=======
->>>>>>> 35609c9f1bfe9af04bb72ed2a51f3320c2b24fc6
