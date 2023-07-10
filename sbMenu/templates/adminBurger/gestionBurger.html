@@ -1,0 +1,66 @@
+{% extends "../layouts/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container py-4">
+    <div class="row">
+        <div class="table-responsive py-2">
+            <table class=" table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+
+                        <th>Calorias</th>
+                        <th>Foto</th>
+                        <th colspan="2"> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for h in hamburguesa %}
+                    <tr>
+                        <td>{{h.nombre}}</td>
+
+                        <td>{{h.calorias}}</td>
+                        <td><a href="{{ h.foto.url }}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-image" viewBox="0 0 16 16">
+                                    <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                    <path
+                                        d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z" />
+                                </svg></a></td>
+                        <td><a href="/soporte/eliminarFeedback/{{f.id}}" class="btn btn-danger">Eliminar</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+
+<main class="container d-flex align-items-center justify-content-center">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        {% for h in hamburguesa %}
+        <div class="col">
+            <div class="card text-center">
+                <img src="{{ h.foto.url }}" class="card-img-top" alt="{{ h.nombre }}" width="300" height="300">
+                <div class="card-body">
+                    <h5 class="card-title">{{ h.nombre }}</h5>
+                    <a href="hamburguesa/{{ h.id }}" class="btn btn-warning">Ver más...</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+    </div>
+
+</main>
+
+
+{% endblock %}
