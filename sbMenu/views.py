@@ -45,16 +45,13 @@ def guardar_compra(request):
 
     # Obtén la fecha actual
     fecha_actual = datetime.now()
+    cantidad = len(carrito_items)
 
     # Crea la instancia de Compra y guarda los detalles de la venta
-    Compra = compra(total=total, fecha=fecha_actual)
+    Compra = compra(total=total, fecha=fecha_actual, cantidad = cantidad)
     Compra.save()
 
     # Guarda la cantidad de hamburguesas compradas
-    cantidad = len(carrito_items)
-    ompra.cantidad = cantidad
-    Compra.save()
-
     # Otros detalles de la venta
     # compra.detalle = ...
 
