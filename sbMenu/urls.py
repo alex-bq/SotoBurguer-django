@@ -8,4 +8,6 @@ urlpatterns = [
     path('hamburguesa/<int:id>/',  views.ver_hamburguesa),
     path('gestionburger/', views.gestionBurger),
     path('agregarburger/',views.agregarHamburguesa),
+    path('editarBurguer/<id>/', views.editarBurguer),
+    path('eliminarBurguer/<id>', views.eliminarBurguer),
 ] 
