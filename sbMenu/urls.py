@@ -7,5 +7,5 @@ urlpatterns = [
     path('',views.menu),
     path('hamburguesa/<int:id>/',  views.ver_hamburguesa),
     path('gestionburger/', views.gestionBurger),
-    
+    path('agregarburger/',views.agregarHamburguesa),
 ] 
