@@ -37,6 +37,7 @@ def agregar_al_carrito(request, hamburguesa_id):
     hamburguesa_item = hamburguesa.objects.get(id=hamburguesa_id)
     carrito_item = carritoItem(hamburguesa=hamburguesa_item, nombre=hamburguesa_item.nombre, precio=hamburguesa_item.precio)
     carrito_item.save()
+    messages.success(request, "Agregado al carro correctamente")
     return redirect('/menu/')
 
 def guardar_compra(request):
@@ -49,6 +50,7 @@ def guardar_compra(request):
 
     # Crea la instancia de Compra y guarda los detalles de la venta
     Compra = compra(total=total, fecha=fecha_actual, cantidad = cantidad)
+    messages.success(request, "Compra efectuada correctamente. Esperate sentaito")
     Compra.save()
 
     # Guarda la cantidad de hamburguesas compradas
