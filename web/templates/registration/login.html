@@ -65,41 +65,51 @@
 
   <div class="formulario_a d-flex align-items-center justify-content-center">
     <div class="row">
-        <div class="col-12 col-md-6">
-          <br><br><br><br>
-            <div class="card">
-                <div class="card-body">
-                    <h2>Inicio de sesión</h2>
-                    <hr>
-                    <form action="" method="post">
+      <div class="col-2 col-md-12">
+        <br><br><br><br>
+        <div class="card">
+          <div class="card-body">
+            <h2>Inicio de sesión</h2>
+            <hr>
+            <form action="" method="post">
+              {% csrf_token %}
 
-                        {% csrf_token %}
-                        <!--
-                            Formulario de django
-                        -->
-                        {{form}}
-                        <br>
+              <label for="{{ form.username.id_for_label }}">Nombre de usuario:</label>
+              <input type="text" name="{{ form.username.html_name }}" id="{{ form.username.id_for_label }}"
+                class="form-control" required>
 
-                        <h5>Si no tienes una cuenta:</h5>
-                        
-                        <a href="/registro">Registrate</a>
+              <label for="{{ form.password.id_for_label }}">Contraseña:</label>
+              <input type="password" name="{{ form.password.html_name }}" id="{{ form.password.id_for_label }}"
+                class="form-control" required>
 
-                        <br>
-                        <br>
-                        <input type="submit" value="Ingresar" class="btn btn-warning float-end">
+              {% if error_message %}
+              <div class="alert alert-danger" role="alert">
+                {{ error_message }}
+              </div>
+              {% endif %}
 
-                    </form>
-                </div>
-            </div>
-            <br><br><br>
+              <h5>Si no tienes una cuenta:</h5>
+              <a href="/registro">Regístrate</a>
+
+              <br>
+              <br>
+              <input type="submit" value="Ingresar" class="btn btn-warning float-end">
+            </form>
+
+
+
+
+          </div>
         </div>
+        <br><br><br>
+      </div>
     </div>
   </div>
 
 
 
 
-  <br>
+
 
   <footer>
     <section class="container">

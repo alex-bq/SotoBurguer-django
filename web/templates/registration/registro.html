@@ -69,33 +69,61 @@
     <div class="form-group">
       <h1 class="titulo_soporte">Registro</h1>
       <hr>
-      <form action="" method="post">
-
+      <form action="" method="post" class="needs-validation">
         {% csrf_token %}
-        <!--
-            Formulario de django
-        -->
-        {{form}}
+
+
+
+
+        <label for="{{ form.username.id_for_label }}">Nombre de usuario:</label>
+        <input type="text" name="{{ form.username.html_name }}" id="{{ form.username.id_for_label }}"
+          class="form-control" required>
+
+        <label for="{{ form.first_name.id_for_label }}">Nombre:</label>
+        <input type="text" name="{{ form.first_name.html_name }}" id="{{ form.first_name.id_for_label }}"
+          class="form-control" required>
+
+        <label for="{{ form.last_name.id_for_label }}">Apellidos:</label>
+        <input type="text" name="{{ form.last_name.html_name }}" id="{{ form.last_name.id_for_label }}"
+          class="form-control" required>
+
+        <label for="{{ form.email.id_for_label }}">Dirección de correo electrónico:</label>
+        <input type="email" name="{{ form.email.html_name }}" id="{{ form.email.id_for_label }}" class="form-control"
+          required>
+
+        <label for="{{ form.password1.id_for_label }}">Contraseña:</label>
+        <input type="password" name="{{ form.password1.html_name }}" id="{{ form.password1.id_for_label }}"
+          class="form-control" required>
+
+        <label for="{{ form.password2.id_for_label }}">Contraseña (confirmación):</label>
+        <input type="password" name="{{ form.password2.html_name }}" id="{{ form.password2.id_for_label }}"
+          class="form-control" required>
+
         <br>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-danger" role="alert">
+          {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
 
         <h5>Si ya tienes una cuenta:</h5>
-        
         <a href="/cuenta/login/">Inicia sesión</a>
+
+
 
         <br>
         <br>
         <input type="submit" value="Registrarse" class="btn btn-warning float-end">
+      </form>
 
-    </form>
-  
+
     </div>
-  
+
   </main>
 
 
-
-
-  <br>
 
   <footer>
     <section class="container">
