@@ -64,9 +64,10 @@ def guardar_compra(request):
 
 
 def eliminar_item_carrito(request, item_id):
-    item = carrito.objects.get(id=item_id)
+    item = get_object_or_404(carritoItem, id=item_id)
     item.delete()
     return redirect('/menu/carrito')
+
 def agregarHamburguesa(request):
 
     data = {
