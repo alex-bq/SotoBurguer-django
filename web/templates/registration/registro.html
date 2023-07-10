@@ -62,40 +62,35 @@
       </div>
     </div>
   </nav><br><br><br>
-  <header>
-    <img id="brand" src="{% static 'imagenes/image.png' %}" alt="brand sotoburguer">
-  </header>
 
-  <div class="container">
-    <div class="row">
-        <div class="col-12 col-md-6 offset-d3">
-            <div class="card">
-                <div class="card-body">
-                    <h2>Registrate</h2>
-                    <hr>
-                    <form action="" method="post">
+  <main class="formulario_a d-flex align-items-center justify-content-center">
 
-                        {% csrf_token %}
-                        <!--
-                            Formulario de django
-                        -->
-                        {{form}}
-                        <br>
-                        <br>
-                        <h5>Si ya tienes una cuenta:</h5>
-                        
-                        <a href="{% url 'login' %}">Inicia sesión</a>
 
-                        <br>
-                        <br>
-                        <input type="submit" value="Registrarse" class="btn btn-warning float-end">
+    <div class="form-group">
+      <h1 class="titulo_soporte">Registro</h1>
+      <hr>
+      <form action="" method="post">
 
-                    </form>
-                </div>
-            </div>
-        </div>
+        {% csrf_token %}
+        <!--
+            Formulario de django
+        -->
+        {{form}}
+        <br>
+
+        <h5>Si ya tienes una cuenta:</h5>
+        
+        <a href="/cuenta/login/">Inicia sesión</a>
+
+        <br>
+        <br>
+        <input type="submit" value="Registrarse" class="btn btn-warning float-end">
+
+    </form>
+  
     </div>
-  </div>
+  
+  </main>
 
 
 
