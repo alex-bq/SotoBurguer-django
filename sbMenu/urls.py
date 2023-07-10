@@ -5,12 +5,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('',views.menu),
-    path('stobger/', views.stobger),
-    path('stobger2/', views.stobger2),
-    path('stobger3qsos/', views.stobger3qsos),
-    path('stobgeregg/', views.stobgeregg),
-    path('stobgerfries/', views.stobgerfries),
-    path('stobgerhilo/', views.stobgerhilo),
-    path('hamburguesa/<int:id>/',  views.ver_hamburguesa, name='ver_hamburguesa'),
+    path('hamburguesa/<int:id>/',  views.ver_hamburguesa),
+    path('gestionburger/', views.gestionBurger),
     
 ] 

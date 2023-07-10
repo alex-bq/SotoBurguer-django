@@ -71,11 +71,24 @@
                 <div class="row row-cols-1 row-cols-md-2 g-5">
                     <div class="col">
 
-                        <a class="btn btn-warning" href="/soporte/gestion">Administrar</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Administracion
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Hamburguesas</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="/soporte/gestion/">Feedback</a></li>
+                            </ul>
+                        </div>
                     </div>
 
                 </div>
             </div>
+
             {% endif %}
             <div style="position: fixed; right: 40px;">
                 <!--pa mostrar el cerrar e iniciar sesión en el navbar-->
