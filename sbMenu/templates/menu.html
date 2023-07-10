@@ -8,6 +8,7 @@
 <header class="titulo container d-flex justify-content-left">
   <div class="row">
     <div class="col">
+      <br><br>
       <h1 class="display-3">Nuestra Carta</h1>
       <p class="lead">Disfruta de nuestro delicioso menú</p>
     </div>
@@ -27,7 +28,9 @@
           height="300">
         <div class="card-body">
           <h5 class="card-title">{{ hamburguesa.nombre }}</h5>
+          <p>${{hamburguesa.precio}}</p>
           <a href="hamburguesa/{{ hamburguesa.id }}" class="btn btn-warning">Ver más...</a>
+          <a href="#" class="btn btn-warning">Agregar al carro</a>
         </div>
       </div>
     </div>
