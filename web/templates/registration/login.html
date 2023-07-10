@@ -82,11 +82,18 @@
               <input type="password" name="{{ form.password.html_name }}" id="{{ form.password.id_for_label }}"
                 class="form-control" required>
 
-              {% if error_message %}
-              <div class="alert alert-danger" role="alert">
-                {{ error_message }}
-              </div>
-              {% endif %}
+                {% if messages %}
+                {% for x in messages %}
+                <script>
+                    Swal.fire({
+                        "title": "Aviso del tío Soto",
+                        "text": "{{x}}",
+                        "icon": "error"
+            
+                    })
+                </script>
+                {% endfor %}
+                {% endif %}
 
               <h5>Si no tienes una cuenta:</h5>
               <a href="/registro">Regístrate</a>
