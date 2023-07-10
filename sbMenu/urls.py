@@ -9,6 +9,7 @@ urlpatterns = [
     path('gestionburger/', views.gestionBurger),
     path('agregarburger/',views.agregarHamburguesa),
     path('carrito/',views.carrito),
+    path('ventas/',views.listarVentas),
      path('agregar_al_carrito/<int:hamburguesa_id>/', views.agregar_al_carrito),
     path('carrito/guardar_compra/', views.guardar_compra),
     path('editarBurguer/<id>/', views.editarBurguer),

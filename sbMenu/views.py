@@ -109,5 +109,9 @@ def eliminarBurguer (request, id):
     return redirect(to="/menu/gestionburger/")
 
 
+def listarVentas(request):
+    compras = compra.objects.all()
+    return render(request, 'adminBurger/listarVentas.html', {'compras': compras})
+
 
 
