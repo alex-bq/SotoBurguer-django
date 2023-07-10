@@ -62,6 +62,11 @@ def guardar_compra(request):
 
     return redirect('/menu/')
 
+
+def eliminar_item_carrito(request, item_id):
+    item = carrito.objects.get(id=item_id)
+    item.delete()
+    return redirect('/menu/carrito')
 def agregarHamburguesa(request):
 
     data = {
@@ -112,6 +117,8 @@ def eliminarBurguer (request, id):
 def listarVentas(request):
     compras = compra.objects.all()
     return render(request, 'adminBurger/listarVentas.html', {'compras': compras})
+
+
 
 
 

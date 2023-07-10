@@ -6,38 +6,46 @@
 {% block content %}
 <br>
 
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th><h3>Nombre</h3></th>
-            <th><h3>Precio</h3></th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for item in carrito %}
-        <tr>
-            <td>{{ item.nombre }}</td>
-            <td>${{ item.precio }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-    <tfoot>
-        <tr>
-            <td colspan="2">Total: ${{ total }}</td>
-        </tr>
-        <tr>
-            <td colspan="2">Cantidad: {{ cantidad }}</td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <form action="guardar_compra/" method="POST">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-danger">Comprar</button>
-                </form>
-            </td>
-        </tr>
-    </tfoot>
-</table>
+<header class="titulo container d-flex justify-content-left">
+    <div class="row">
+        <div class="col">
+            <br><br>
+            <h1 class="display-3">SotoCarrito 🛒</h1>
+        </div>
+    </div>
+</header>
+
+<div class="container py-4">
+    <div class="row">
+        <div class="table-responsive py-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            <h3>Nombre</h3>
+                        </th>
+                        <th>
+                            <h3>Precio</h3>
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in carrito %}
+                    <tr>
+                        <td>{{ item.nombre }}</td>
+                        <td>${{ item.precio }}</td>
+                        <td><a href="eliminar/{{item.id}}" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
 
 
 
