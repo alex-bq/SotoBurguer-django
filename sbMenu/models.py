@@ -12,6 +12,7 @@ class hamburguesa(models.Model):
     grasas = models.DecimalField(max_digits=8, decimal_places=2)
     sodio = models.DecimalField(max_digits=8, decimal_places=2)
     foto = models.ImageField(upload_to='hamburguesas/', blank=True, null=True)
+    precio = models.IntegerField(null=True)
 
     def __str__(self):
         return self.nombre
